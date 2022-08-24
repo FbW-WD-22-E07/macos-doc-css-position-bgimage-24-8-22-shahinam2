@@ -1,25 +1,49 @@
 * {
     /* how to reset your css ? */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
-    /* maybe make a default doc width? */
+    /* maybe make a default dock width? */
+    --dock-width: 60%;
 }
 
 body {
     /* how to make a background image ? */
-    
+    background-image: url(./images/macos.png);
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
     /* do you need height and width ? */
 }
 
-#doc {
-     /* you need display and position  */
+#dock {
+    /* you need display and position  */
+    display: flex;
+    justify-content: space-around;
+
+    background-image: linear-gradient(to top,
+            hsla(243, 100%, 7%, 0.7) 0%,
+            hsla(314, 56%, 29%, 0.5) 35%,
+            hsla(190, 100%, 76%, 0.2) 100%);
+    border-radius: 10px;
+
+    position: fixed;
+    bottom: 10px;
+    left: calc(40% / 2);
+    width: 60%;
 }
 
-.doc-icon {
+.dock-icon {
     /* give a width and slow down the hover animation */
+    width: 7%;
+    transition: all 400ms cubic-bezier(.47, 1.64, .41, .8);
 }
 
-.doc-icon:hover {
+.dock-icon:hover {
     /* make the animation you like */
+    transform: scale(1.3) translateY(-15px);
 }
